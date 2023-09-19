@@ -14,6 +14,7 @@ public class StartApp implements CommandLineRunner {
     private UserRepository repository;
     @Override
     public void run(String... args) throws Exception {
+        insertUser();
         List<User> users = repository.findByNameContaining("GLEYSON");
         for(User u: users){
             System.out.println(u);
